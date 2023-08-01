@@ -14,8 +14,10 @@
 		208F16812235EAAC002CF75F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 208F167F2235EAAC002CF75F /* LaunchScreen.storyboard */; };
 		208F16892235F109002CF75F /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208F16882235F109002CF75F /* DesignableView.swift */; };
 		20B1568022480ADC00A70D9F /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B1567F22480ADC00A70D9F /* UIViewController+Extensions.swift */; };
-		AECCDBF42A75874E0067E90D /* LoginExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECCDBF32A75874E0067E90D /* LoginExampleUITests.swift */; };
-		AECCDBF62A75874E0067E90D /* LoginExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECCDBF52A75874E0067E90D /* LoginExampleUITestsLaunchTests.swift */; };
+		AEB9C0572A78809500B825A4 /* LoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB9C0562A78809500B825A4 /* LoginTests.swift */; };
+		AEB9C05A2A78823700B825A4 /* PageObjectHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB9C0592A78823700B825A4 /* PageObjectHelper.swift */; };
+		AECCDBF42A75874E0067E90D /* LoginPageObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECCDBF32A75874E0067E90D /* LoginPageObject.swift */; };
+		AECCDBF62A75874E0067E90D /* HooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECCDBF52A75874E0067E90D /* HooksTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,9 +40,11 @@
 		208F16822235EAAC002CF75F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		208F16882235F109002CF75F /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		20B1567F22480ADC00A70D9F /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		AEB9C0562A78809500B825A4 /* LoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTests.swift; sourceTree = "<group>"; };
+		AEB9C0592A78823700B825A4 /* PageObjectHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageObjectHelper.swift; sourceTree = "<group>"; };
 		AECCDBF12A75874E0067E90D /* LoginExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AECCDBF32A75874E0067E90D /* LoginExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginExampleUITests.swift; sourceTree = "<group>"; };
-		AECCDBF52A75874E0067E90D /* LoginExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AECCDBF32A75874E0067E90D /* LoginPageObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageObject.swift; sourceTree = "<group>"; };
+		AECCDBF52A75874E0067E90D /* HooksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HooksTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,11 +98,45 @@
 			path = LoginExample;
 			sourceTree = "<group>";
 		};
+		AEB9C0542A787D5D00B825A4 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				AEB9C0582A78821F00B825A4 /* Helper */,
+				AECCDBF32A75874E0067E90D /* LoginPageObject.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		AEB9C0552A787D7700B825A4 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				AEB9C0562A78809500B825A4 /* LoginTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		AEB9C0582A78821F00B825A4 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				AEB9C0592A78823700B825A4 /* PageObjectHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		AEB9C05B2A78933D00B825A4 /* Hooks */ = {
+			isa = PBXGroup;
+			children = (
+				AECCDBF52A75874E0067E90D /* HooksTests.swift */,
+			);
+			path = Hooks;
+			sourceTree = "<group>";
+		};
 		AECCDBF22A75874E0067E90D /* LoginExampleUITests */ = {
 			isa = PBXGroup;
 			children = (
-				AECCDBF32A75874E0067E90D /* LoginExampleUITests.swift */,
-				AECCDBF52A75874E0067E90D /* LoginExampleUITestsLaunchTests.swift */,
+				AEB9C05B2A78933D00B825A4 /* Hooks */,
+				AEB9C0552A787D7700B825A4 /* Tests */,
+				AEB9C0542A787D5D00B825A4 /* Pages */,
 			);
 			path = LoginExampleUITests;
 			sourceTree = "<group>";
@@ -217,8 +255,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AECCDBF42A75874E0067E90D /* LoginExampleUITests.swift in Sources */,
-				AECCDBF62A75874E0067E90D /* LoginExampleUITestsLaunchTests.swift in Sources */,
+				AEB9C0572A78809500B825A4 /* LoginTests.swift in Sources */,
+				AEB9C05A2A78823700B825A4 /* PageObjectHelper.swift in Sources */,
+				AECCDBF42A75874E0067E90D /* LoginPageObject.swift in Sources */,
+				AECCDBF62A75874E0067E90D /* HooksTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
