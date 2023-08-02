@@ -10,9 +10,7 @@ import Foundation
 
 class LoginTests: HooksTests {
     
-    let loginPage = LoginPageObject()
-
-    func testLoginSucessfully() {
+    func testLoginSucessfully1() {
         loginPage.checkTextHomeIsDisplayed()
         loginPage.fillFieldEmailAddress(email: "liandro.sys@gmail.com")
         loginPage.fillFieldPassword(password: "1234567")

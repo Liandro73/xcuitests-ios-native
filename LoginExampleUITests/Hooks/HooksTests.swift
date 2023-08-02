@@ -11,6 +11,7 @@ import XCTest
 class HooksTests: XCTestCase {
 
     let app = XCUIApplication()
+    let loginPage = LoginPageObject()
 
     override func setUp() {
         super.setUp()
